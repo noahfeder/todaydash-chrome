@@ -1,0 +1,21 @@
+{
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAutjwbk/4QjI+v0+7yuYSultW1M6uW+Ks6Z3iQYU0P/mNL5pNRk1paD+sBQpMXNCc7SZ3lsTmg1/qWUPm6sr7xWcClHXYrfb8uaAVrKnmTBE7L2ZuC+EIH5LgPnEnZyEpCnYnK/T5R46jTsqH+5QUZ448+R2TBvSybDcfkF46bzkWIlhIXg3tD+0XhwUCM6Pq7cIoa24FRibSDnd7o0i5jOXfHn251vMik+TqyVhXG+Bl0JnbvYbVC86CSZW2TiLSxPjp/R/nfE432wgGhX5wszhjrEid8gOnLlT7T8y6C98rr1hP7zmR5LHDgkzUVa3wLwldx9+cC9TFnDOseao3SwIDAQAB",
+    "name": "TodayDash",
+    "short_name": "TodayDash",
+    "description": "Start your day with TodayDash! Get your trending topics, news, weather, and music, all in one place.",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "permissions": [
+        "identity",
+        "identity.email",
+        "geolocation",
+        "https://todaydash.herokuapp.com/*"
+    ],
+     "chrome_url_overrides" : {
+        "newtab": "td.html"
+    },
+    "oauth2": {
+        "client_id": "633287426900-tjggvmlcs1v3s97o2pot9d9p300q66qm.apps.googleusercontent.com",
+        "scopes": ["profile"]
+    }
+}

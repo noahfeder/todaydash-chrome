@@ -1,0 +1,598 @@
+.weather {
+    text-shadow: 0px 0px 8px #222
+}
+
+.location {
+    text-shadow: 0px 0px 8px #222
+}
+
+.welcome {
+    text-shadow: 0px 0px 8px #222
+}
+
+#edit_name {
+    text-shadow: 0px 0px 8px #222
+}
+
+.login_container {
+    height: 100px;
+    width: 260px;
+    margin-top: calc(30vh - 50px);
+    margin-left: calc(50vw - 130px);
+    text-shadow: 0px 0px 15px #222
+}
+
+.login {
+    font-family: "Quattrocento Sans";
+    font-size: 20px;
+    text-align: left;
+    text-shadow: 0px 0px 15px #222
+}
+
+.user_email_input {
+    float: right
+}
+
+.login_password_input {
+    float: right
+}
+
+.new_user_container {
+    height: 100px;
+    width: 260px;
+    margin-top: 20vh;
+    margin-left: calc(50vw - 130px);
+    text-shadow: 0px 0px 15px #222
+}
+
+.new_user {
+    font-family: "Quattrocento Sans";
+    font-size: 20px;
+    text-align: left;
+    text-shadow: 0px 0px 15px #222
+}
+
+.fname_input {
+    float: right
+}
+
+.lname_input {
+    float: right
+}
+
+.email_input {
+    float: right
+}
+
+.password_input {
+    float: right
+}
+
+body,.container {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Quattrocento Sans", sans-serif;
+    background-color: #FAFAFA;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #eee
+}
+
+body a,.container a {
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer
+}
+
+body a:hover,.container a:hover {
+    color: #888
+}
+
+.container {
+    background: none
+}
+
+.header,.content,.footer {
+    width: calc(100% - 2 * $minor-padding);
+    height: 20vh;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin: 0px 10px;
+    position: relative
+}
+
+.header img,.content img,.footer img {
+    width: 100%;
+    height: auto
+}
+
+.header .left,.content .left,.footer .left {
+    flex: 0 0 20%;
+    box-sizing: border-box;
+    padding-left: 10px
+}
+
+.header .left .soundcloud,.content .left .soundcloud,.footer .left .soundcloud {
+    margin-top: 20px;
+    display: flex
+}
+
+.header .left .soundcloud iframe,.content .left .soundcloud iframe,.footer .left .soundcloud iframe {
+    flex: 0 0 20px;
+    height: 20px;
+    width: 20px
+}
+
+.header .left .soundcloud .title_wrapper,.content .left .soundcloud .title_wrapper,.footer .left .soundcloud .title_wrapper {
+    padding-left: 3px;
+    flex: 0 1 100%;
+    width: calc(100% - 10px);
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: clip
+}
+
+.header .left .soundcloud .title_wrapper .song_title,.content .left .soundcloud .title_wrapper .song_title,.footer .left .soundcloud .title_wrapper .song_title {
+    display: inline-block;
+    transition: margin-left 6s linear;
+    margin-left: 0
+}
+
+.header .left .soundcloud .title_wrapper .song_title:hover,.content .left .soundcloud .title_wrapper .song_title:hover,.footer .left .soundcloud .title_wrapper .song_title:hover {
+    margin-left: -350px
+}
+
+.header .right,.content .right,.footer .right {
+    box-sizing: border-box;
+    flex: 1 0 20%;
+    text-align: right;
+    padding-right: 10px;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap
+}
+
+.header .right>div,.content .right>div,.footer .right>div {
+    flex: 0 1
+}
+
+.header .right .weather,.content .right .weather,.footer .right .weather {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.5em
+}
+
+.header .right .location,.content .right .location,.footer .right .location {
+    text-align: right
+}
+
+.header .center,.content .center,.footer .center {
+    flex: 1 0 60%;
+    text-align: center;
+    font-family: "Vollkorn", serif;
+    width: 100%
+}
+
+.header .center .welcome,.content .center .welcome,.footer .center .welcome {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 20px
+}
+
+.header .center .welcome input,.content .center .welcome input,.footer .center .welcome input {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 8px;
+    font-size: 2rem;
+    color: #eee;
+    font-family: "Vollkorn", serif;
+    font-weight: bold;
+    text-align: left
+}
+
+.header .center .welcome input:focus,.content .center .welcome input:focus,.footer .center .welcome input:focus {
+    outline: none
+}
+
+.header .center .welcome input:hover,.content .center .welcome input:hover,.footer .center .welcome input:hover {
+    text-decoration: underline
+}
+
+.header .center .welcome h1,.content .center .welcome h1,.footer .center .welcome h1 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    vertical-align: text-bottom;
+    line-height: 2rem;
+    font-size: 2rem;
+    height: 2rem;
+    text-align: right;
+    display: table
+}
+
+.header .center .welcome>*,.content .center .welcome>*,.footer .center .welcome>* {
+    flex: 0 1;
+    height: 2rem
+}
+
+.content {
+    height: 70vh
+}
+
+.content>div {
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+    top: 75%;
+    transition: top 400ms, height 400ms
+}
+
+.content div {
+    flex: 1 1 30%;
+    padding: 10px;
+    padding-top: 30px;
+    box-sizing: border-box
+}
+
+.content .top {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: "Vollkorn", sans-serif;
+    color: #02C1DC;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+    transition: text-shadow 400ms
+}
+
+.content .top:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 9px #222
+}
+
+.content .twitter .tweets,.content .twitter .top,.content .twitter .tweet {
+    padding: 5px
+}
+
+.content .twitter .tweets {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 400ms transform;
+    height: 100%;
+    background-color: rgba(60,60,60,0.5)
+}
+
+.content .twitter .tweets .tweetset {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    word-wrap: break-word;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden
+}
+
+.content .twitter .tweets .tweetset h2 {
+    color: #02C1DC;
+    text-align: center;
+    margin: 5px;
+    font-size: 1.2em
+}
+
+.content .twitter .tweets .tweetset h2:hover {
+    cursor: pointer
+}
+
+.content .twitter .tweets .local {
+    transform: rotateY(180deg) translateZ(1px)
+}
+
+.content .news {
+    overflow: hidden
+}
+
+.content .news .headlines {
+    height: 90%;
+    overflow: scroll;
+    padding-top: 0;
+    background-color: rgba(60,60,60,0.5)
+}
+
+.content .news .top {
+    color: #FFAE00
+}
+
+.content .todos .top {
+    color: #FF1300
+}
+
+.content .todos .form_and_button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: rgba(60,60,60,0.5)
+}
+
+.content .todos .form_and_button #todo_item {
+    flex: 0 1 70%;
+    margin: 0px 15px
+}
+
+.content .todos .form_and_button .submit_item {
+    flex: 1 0 20%
+}
+
+.content .todos .items {
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    background-color: rgba(60,60,60,0.5);
+    height: 100%;
+    padding: 10px
+}
+
+.content .todos .items .todo {
+    position: relative
+}
+
+.content .todos .items .todo:nth-child(even) {
+    background-color: rgba(60,60,60,0.5)
+}
+
+.content .todos .items .todo .completed {
+    text-decoration: line-through
+}
+
+.content .todos .items .todo .delete_todo {
+    float: right
+}
+
+.content .todos .items .todo span {
+    padding: 0px 3px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 20px
+}
+
+.footer {
+    height: 10vh;
+    position: relative
+}
+
+.footer .settings {
+    width: calc(100% - 20vh);
+    height: 8vh;
+    margin-top: 2vh;
+    position: absolute;
+    left: 10vh;
+    background-color: rgba(60,60,60,0.5);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 2vh;
+    transition: 400ms transform linear;
+    transform-origin: bottom center;
+    transform: rotateX(-90deg)
+}
+
+.footer .settings input {
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer
+}
+
+.footer .settings>* {
+    flex: 1 0 50%;
+    text-align: center;
+    height: 1rem
+}
+
+.footer img {
+    cursor: pointer;
+    transition: transform 800ms, -webkit-filter 800ms;
+    position: absolute;
+    height: 6vh;
+    width: auto;
+    margin: 2vh
+}
+
+.footer img:first-child:hover {
+    transform: rotate(360deg);
+    -webkit-filter: drop-shadow(0px 0px 5px #FAFAFA)
+}
+
+.footer img.settings_button {
+    right: 0
+}
+
+.footer img.settings_button:hover {
+    transform: rotate(360deg)
+}
+
+.rotate {
+    transform: rotateY(180deg)
+}
+
+.content>div.expand {
+    height: 100%;
+    top: 0
+}
+
+.hideplayer {
+    visibility: hidden
+}
+
+.temp {
+    font-family: "Vollkorn";
+    font-size: 2rem;
+}
+
+.settings.flipup {
+    transform: rotateX(0deg)
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width:1200px
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container .header,.container .content,.container .footer {
+        height:15vh
+    }
+
+    .container .header .center h1,.container .content .center h1,.container .footer .center h1,.container .header .center input,.container .content .center input,.container .footer .center input {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        height: 1.5rem
+    }
+
+    .container .content {
+        height: 75vh;
+        flex-direction: column;
+        justify-content: center
+    }
+
+    .container .content>div {
+        flex: 0 1 65px;
+        width: 100%;
+        top: 0;
+        transition: flex-basis 400ms;
+        padding-top: 5px
+    }
+
+    .container .content>div.expand {
+        flex-basis: calc(100% - 150px)
+    }
+
+    .temp {
+        font-size: 1.5rem;
+    }
+}
+
+@font-face {
+    font-family: 'si';
+    src: url("/font_buttons/socicon.eot");
+    src: url("/font_buttons/socicon.eot?#iefix") format("embedded-opentype"),url("/font_buttons/socicon.woff") format("woff"),url("/font_buttons/socicon.ttf") format("truetype"),url("/font_buttons/socicon.svg#icomoonregular") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family:si;
+        src: url(font_buttons/socicon.svg) format(svg)
+    }
+}
+
+.soc {
+    overflow: hidden;
+    list-style: none;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    left: calc(5vh - 14px);
+    top: calc(5vh - 14px);
+    display: flex;
+    flex-flow: row nowrap;
+    width: 28px;
+    height: 28px;
+    margin-left: 0;
+    justify-content: flex-end;
+    transition: all 400ms;
+    overflow: visible
+}
+
+.soc.showSoc {
+    width: calc(84px);
+    margin-left: 10vh;
+    opacity: 1;
+    z-index: 1
+}
+
+.soc>div {
+    overflow: visible;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px
+}
+
+.soc>div a {
+    font-family: si !important;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: border-box;
+    transition: .1s transform;
+    transform: translateZ(0);
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    line-height: 28px;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-right: 2px;
+    color: #ffffff;
+    background-color: none
+}
+
+.soc a:hover {
+    z-index: 2;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px)
+}
+
+.soc-icon-last {
+    margin: 0 !important
+}
+
+.soc-twitter {
+    background-color: #4da7de
+}
+
+.soc-twitter::before {
+    content: 'a'
+}
+
+.soc-facebook {
+    background-color: #3e5b98
+}
+
+.soc-facebook::before {
+    content: 'b'
+}
+
+.soc-email1 {
+    background-color: #578AD6
+}
+
+.soc-email1::before {
+    content: '<'
+}
