@@ -3,7 +3,7 @@
     "name": "TodayDash",
     "short_name": "TodayDash",
     "description": "Start your day with TodayDash! Get your trending topics, news, weather, and music, all in one place.",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "icons" : {
         "16":"logo-16.png",
         "48":"logo-48.png",
