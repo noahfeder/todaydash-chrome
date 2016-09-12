@@ -307,7 +307,8 @@ body a:hover,.container a:hover {
 
 .content .news .headlines {
     height: 90%;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding-top: 0;
     background-color: rgba(60,60,60,0.5)
 }
