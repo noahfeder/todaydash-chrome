@@ -350,7 +350,11 @@ body a:hover,.container a:hover {
 }
 
 .content .todos .items .todo {
-    position: relative
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content .todos .items .todo:nth-child(even) {
@@ -362,15 +366,36 @@ body a:hover,.container a:hover {
 }
 
 .content .todos .items .todo .delete_todo {
-    float: right
+    align-self: flex-end;
+    flex: 0 0 18px;
+    height: 18px;
+    border: none;
+    padding: 2px 3px;
+    margin: 2px;
+    border-radius: 2px;
+    background-color: transparent;
+    color: $font-color;
+    cursor: pointer;
 }
+
+.content .todos .items .todo .delete_todo:hover {
+            text-shadow: 0px 0px 3px #eee;
+}
+
 
 .content .todos .items .todo span {
     padding: 0px 3px;
+    flex: 1 0 60%;
     width: auto;
     height: auto;
     position: absolute;
     left: 20px
+}
+
+.content .todos .items .todo input[type="checkbox"] {
+    flex: 0 0 12px;
+    align-self: flex-start;
+    margin: 5.5px;
 }
 
 .footer {
