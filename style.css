@@ -76,11 +76,12 @@ body,.container {
     width: 100%;
     box-sizing: border-box;
     font-family: "Quattrocento Sans", sans-serif;
+    background-image: url(bg.jpeg);
     background-color: #FAFAFA;
     background-size: cover;
     background-position: 0 0;
     background-repeat: no-repeat;
-    color: #eee
+    color: #eee;
 }
 
 body a,.container a {
@@ -168,11 +169,12 @@ body a:hover,.container a:hover {
 .header .right .weather,.content .right .weather,.footer .right .weather {
     text-align: right;
     margin-top: 20px;
-    font-size: 1.5em
+    font-size: 1.5rem
 }
 
 .header .right .location,.content .right .location,.footer .right .location {
-    text-align: right
+    text-align: right;
+    font-size: 1rem;
 }
 
 .header .center,.content .center,.footer .center {
@@ -242,23 +244,25 @@ body a:hover,.container a:hover {
     flex: 1 1 30%;
     padding: 10px;
     padding-top: 30px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 .content .top {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 600;
     font-family: "Vollkorn", sans-serif;
     color: #02C1DC;
     text-align: center;
     padding: 5px;
     margin-top: 20px;
-    transition: text-shadow 400ms
+    transition: text-shadow 400ms;
+    text-shadow: 0px 0px 9px #222;
 }
 
 .content .top:hover {
     cursor: pointer;
-    text-shadow: 0px 0px 9px #222
+    text-shadow: 0px 0px 9px #666;
 }
 
 .content .twitter .tweets,.content .twitter .top,.content .twitter .tweet {

@@ -99,7 +99,7 @@ $(document).ready(function() {
     appendTodos(data.todos);
     appendName(data.name);
     appendForm(data.id);
-    appendPics(data.pics);
+    //appendPics(data.pics);
   };
 
   // create a new todo
