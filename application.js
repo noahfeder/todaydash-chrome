@@ -88,7 +88,7 @@ $(document).ready(function() {
     updateInput(name);
   };// end of appendName function
 
-  function base64ifyPic(url) {
+  function base64ifyPic(url, append) {
     var img = new Image();
     img.crossOrigin = 'Anonymous';
     img.onload = function() {
@@ -117,7 +117,9 @@ $(document).ready(function() {
       ctx.drawImage(this,0,0,width,height);
 
       var dataUrl = canvas.toDataURL('image/jpeg', 0.6);
-      $('body').css('background-image', 'url('+ dataUrl + ')');
+      if (append) {
+        $('body').css('background-image', 'url('+ dataUrl + ')');
+      }
       chrome.storage.local.set({image: dataUrl});
       canvas = null;
     }
@@ -137,7 +139,7 @@ $(document).ready(function() {
     appendName(data.name);
     appendForm(data.id);
     if (refresh.pic) {
-      base64ifyPic(data.pics);
+      base64ifyPic(data.pics, refresh.append);
     }
   };
 
@@ -286,7 +288,7 @@ $(document).ready(function() {
       interactive: true
     }, function(token) {
       if (chrome.runtime.lastError) {
-          alert(chrome.runtime.lastError.message);
+          console.log(chrome.runtime.lastError.message);
           return;
       }
       var email;
@@ -320,18 +322,18 @@ $(document).ready(function() {
   chrome.storage.local.get(null, data => {
     if (!data.uid) {
       console.log('Welcome, new user!')
-      getAllUserData({pic: true});
+      getAllUserData({pic: true, append:true});
     } else {
       chrome.alarms.get('refresh_data', alarm => {
         if (!alarm) {
           $('body').css('background-image', 'url('+ data.image + ')');
           console.log('Getting updated data');
-          getAllUserData({pic: true});
+          getAllUserData({pic: true, append: false});
           chrome.alarms.create('refresh_data',{delayInMinutes: 10});
         } else {
           console.log('Ready to go!');
           $('body').css('background-image', 'url('+ data.image + ')');
-          appendData(data, {pic: false});
+          appendData(data, {pic: false, append: false});
           listenToMe();
         }
       })
