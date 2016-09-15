@@ -1,73 +1,3 @@
-.weather {
-    text-shadow: 0px 0px 8px #222
-}
-
-.location {
-    text-shadow: 0px 0px 8px #222
-}
-
-.welcome {
-    text-shadow: 0px 0px 8px #222
-}
-
-#edit_name {
-    text-shadow: 0px 0px 8px #222
-}
-
-.login_container {
-    height: 100px;
-    width: 260px;
-    margin-top: calc(30vh - 50px);
-    margin-left: calc(50vw - 130px);
-    text-shadow: 0px 0px 15px #222
-}
-
-.login {
-    font-family: "Quattrocento Sans";
-    font-size: 20px;
-    text-align: left;
-    text-shadow: 0px 0px 15px #222
-}
-
-.user_email_input {
-    float: right
-}
-
-.login_password_input {
-    float: right
-}
-
-.new_user_container {
-    height: 100px;
-    width: 260px;
-    margin-top: 20vh;
-    margin-left: calc(50vw - 130px);
-    text-shadow: 0px 0px 15px #222
-}
-
-.new_user {
-    font-family: "Quattrocento Sans";
-    font-size: 20px;
-    text-align: left;
-    text-shadow: 0px 0px 15px #222
-}
-
-.fname_input {
-    float: right
-}
-
-.lname_input {
-    float: right
-}
-
-.email_input {
-    float: right
-}
-
-.password_input {
-    float: right
-}
-
 body,.container {
     height: 100vh;
     margin: 0 auto;
@@ -111,6 +41,10 @@ body a:hover,.container a:hover {
 .header img,.content img,.footer img {
     width: 100%;
     height: auto
+}
+
+.weather, .welcome, .location, #edit_name {
+    text-shadow: 0px 0px 8px #222
 }
 
 .header .left,.content .left,.footer .left {
@@ -188,7 +122,7 @@ body a:hover,.container a:hover {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .header .center .welcome input,.content .center .welcome input,.footer .center .welcome input {
@@ -196,7 +130,7 @@ body a:hover,.container a:hover {
     background-color: transparent;
     border: none;
     padding: 0 8px;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #eee;
     font-family: "Vollkorn", serif;
     font-weight: bold;
@@ -215,16 +149,16 @@ body a:hover,.container a:hover {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     vertical-align: text-bottom;
-    line-height: 2rem;
-    font-size: 2rem;
-    height: 2rem;
+    line-height: 3rem;
+    font-size: 3rem;
+    height: 3rem;
     text-align: right;
     display: table
 }
 
 .header .center .welcome>*,.content .center .welcome>*,.footer .center .welcome>* {
     flex: 0 1;
-    height: 2rem
+    height: 3rem
 }
 
 .content {
@@ -298,6 +232,12 @@ body a:hover,.container a:hover {
 
 .content .twitter .tweets .tweetset h2:hover {
     cursor: pointer
+}
+
+.content .twitter .tweets .tweetset .trendlist {
+  padding: 0;
+  overflow: scroll;
+  height: calc(90% - 10px);
 }
 
 .content .twitter .tweets .local {
@@ -406,41 +346,9 @@ body a:hover,.container a:hover {
     position: relative
 }
 
-.footer .settings {
-    width: calc(100% - 20vh);
-    height: 8vh;
-    margin-top: 2vh;
-    position: absolute;
-    left: 10vh;
-    background-color: rgba(60,60,60,0.5);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-top: 2vh;
-    transition: 400ms transform linear;
-    transform-origin: bottom center;
-    transform: rotateX(-90deg)
-}
-
-.footer .settings input {
-    background: none;
-    border: none;
-    font-family: inherit;
-    color: inherit;
-    font-size: 1rem;
-    cursor: pointer
-}
-
-.footer .settings>* {
-    flex: 1 0 50%;
-    text-align: center;
-    height: 1rem
-}
-
 .footer img {
     cursor: pointer;
-    transition: transform 800ms, -webkit-filter 800ms;
+    transition: transform 800ms;
     position: absolute;
     height: 6vh;
     width: auto;
@@ -449,22 +357,13 @@ body a:hover,.container a:hover {
 
 .footer img:first-child:hover {
     transform: rotate(360deg);
-    -webkit-filter: drop-shadow(0px 0px 5px #FAFAFA)
-}
-
-.footer img.settings_button {
-    right: 0
-}
-
-.footer img.settings_button:hover {
-    transform: rotate(360deg)
 }
 
 .rotate {
     transform: rotateY(180deg)
 }
 
-.content>div.expand {
+.content > div.expand {
     height: 100%;
     top: 0
 }
@@ -475,7 +374,7 @@ body a:hover,.container a:hover {
 
 .temp {
     font-family: "Vollkorn";
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .settings.flipup {
@@ -538,7 +437,6 @@ body a:hover,.container a:hover {
 }
 
 .soc {
-    overflow: hidden;
     list-style: none;
     opacity: 0;
     z-index: -1;
