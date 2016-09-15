@@ -11,6 +11,7 @@ body,.container {
     background-position: 0 0;
     background-repeat: no-repeat;
     color: #eee;
+    overflow: hidden;
 }
 
 body a,.container a {
@@ -348,7 +349,7 @@ body a:hover,.container a:hover {
 
 .footer img {
     cursor: pointer;
-    transition: transform 800ms;
+    transition: transform 800ms, -webkit-filter 800ms;
     position: absolute;
     height: 6vh;
     width: auto;
@@ -357,6 +358,7 @@ body a:hover,.container a:hover {
 
 .footer img:first-child:hover {
     transform: rotate(360deg);
+    -webkit-filter:  drop-shadow(0px 0px 5px #FAFAFA);
 }
 
 .rotate {
