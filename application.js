@@ -84,7 +84,7 @@ $(document).ready(function() {
   };// end of appendForm function
 
   function appendName(name) {
-    $('.welcome h1').text("Welcome, ")
+    $('.welcome div').text("Welcome, ")
     updateInput(name);
   };// end of appendName function
 
@@ -211,8 +211,8 @@ $(document).ready(function() {
     $span.text(name).appendTo('body');
     var w = document.querySelector('.temp').getBoundingClientRect().width;
     $span.remove();
-    $input[0].style.maxWidth = String(w + 24) + 'px';
-    $input[0].width = String(w + 24) + 'px';
+    $input[0].style.maxWidth = String(w * 1.2) + 'px';
+    $input[0].width = String(w * 1.2) + 'px';
   };
 
   // add all the event listeners!

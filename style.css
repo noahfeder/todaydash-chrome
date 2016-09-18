@@ -51,12 +51,12 @@ body a:hover,.container a:hover {
 .header .left,.content .left,.footer .left {
     flex: 0 0 20%;
     box-sizing: border-box;
-    padding-left: 10px
 }
 
 .header .left .soundcloud,.content .left .soundcloud,.footer .left .soundcloud {
     margin-top: 20px;
-    display: flex
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .header .left .soundcloud iframe,.content .left .soundcloud iframe,.footer .left .soundcloud iframe {
@@ -66,9 +66,8 @@ body a:hover,.container a:hover {
 }
 
 .header .left .soundcloud .title_wrapper,.content .left .soundcloud .title_wrapper,.footer .left .soundcloud .title_wrapper {
-    padding-left: 3px;
     flex: 0 1 100%;
-    width: calc(100% - 10px);
+    width: 100%;
     height: 18px;
     line-height: 18px;
     font-size: 12px;
@@ -90,7 +89,6 @@ body a:hover,.container a:hover {
     box-sizing: border-box;
     flex: 1 0 20%;
     text-align: right;
-    padding-right: 10px;
     position: relative;
     display: flex;
     flex-flow: column nowrap
@@ -103,7 +101,8 @@ body a:hover,.container a:hover {
 .header .right .weather,.content .right .weather,.footer .right .weather {
     text-align: right;
     margin-top: 20px;
-    font-size: 1.5rem
+    font-size: 20px;
+    line-height: 20px;
 }
 
 .header .right .location,.content .right .location,.footer .right .location {
@@ -134,7 +133,6 @@ body a:hover,.container a:hover {
     font-size: 3rem;
     color: #eee;
     font-family: "Vollkorn", serif;
-    font-weight: bold;
     text-align: left
 }
 
@@ -146,10 +144,7 @@ body a:hover,.container a:hover {
     text-decoration: underline
 }
 
-.header .center .welcome h1,.content .center .welcome h1,.footer .center .welcome h1 {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    vertical-align: text-bottom;
+.header .center .welcome div,.content .center .welcome div,.footer .center .welcome div {
     line-height: 3rem;
     font-size: 3rem;
     height: 3rem;
@@ -353,7 +348,7 @@ body a:hover,.container a:hover {
     position: absolute;
     height: 6vh;
     width: auto;
-    margin: 2vh
+    margin: 2vh 2vh 2vh 0;
 }
 
 .footer img:first-child:hover {
@@ -394,7 +389,7 @@ body a:hover,.container a:hover {
         height:15vh
     }
 
-    .container .header .center h1,.container .content .center h1,.container .footer .center h1,.container .header .center input,.container .content .center input,.container .footer .center input {
+    .container .header .center div,.container .content .center div,.container .footer .center div,.container .header .center input,.container .content .center input,.container .footer .center input {
         font-size: 1.5rem;
         line-height: 1.5rem;
         height: 1.5rem
