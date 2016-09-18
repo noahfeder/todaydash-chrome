@@ -269,13 +269,45 @@ body a:hover,.container a:hover {
 
 .content .todos .form_and_button #todo_item {
     flex: 0 1 70%;
-    margin: 0px 15px
+    width: 70%;
+    height: 1.5rem;
+    font-size: inherit;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 8px;
+    color: #eee;
+}
+
+.content .todos .form_and_button #todo_item:active, .content .todos .form_and_button #todo_item:focus {
+    border: none;
+    outline: none;
+}
+
+.content .todos .form_and_button #todo_item::-webkit-input-placeholder {
+    color: #eee;
+    opacity: 0.6;
+    font-size: 1rem;
+    width: 100%;
 }
 
 .content .todos .form_and_button .submit_item {
-    flex: 1 0 20%
+    flex: 1 0 20%;
+    height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    border-radius: 3px;
+    background: transparent;
+    border: none;
+    color: #eee;
+    padding: 0;
+    cursor: pointer;
 }
 
+.content .todos .form_and_button .submit_item:active, .content .todos .form_and_button .submit_item:focus {
+    border: none;
+    outline: none;
+}
 .content .todos .items {
     list-style-type: none;
     -webkit-margin-before: 0;
