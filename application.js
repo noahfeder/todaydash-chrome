@@ -14,38 +14,46 @@ $(document).ready(function() {
   };// end of build function
 
   function appendTweets(data) {
-    data.local.forEach(function(el,index) {
-      if (index < 10) {
-        build('div',el.url,el.name,'tweet','.tweetset.local .trendlist');
-      }
-    });
-    data.global.forEach(function(el,index) {
-      if (index < 10) {
-        build('div',el.url,el.name,'tweet','.tweetset.global .trendlist');
-      }
-    })
+    if (data && data.local && data.global) {
+      data.local.forEach(function(el,index) {
+        if (index < 10) {
+          build('div',el.url,el.name,'tweet','.tweetset.local .trendlist');
+        }
+      });
+      data.global.forEach(function(el,index) {
+        if (index < 10) {
+          build('div',el.url,el.name,'tweet','.tweetset.global .trendlist');
+        }
+      })
+    }
   };// end of appendTweets function
 
   function appendWeather(data) {
-    $('.weather').html(Math.round(data.main.temp) + '&#8457;');
-    $('.location').html(data.name);
+    if (data && data.main && data.name) {
+      $('.weather').html(Math.round(data.main.temp) + '&#8457;');
+      $('.location').html(data.name);
+    }
   }// end of appendWeather function
 
   function appendSound(data) {
-    var $sc = $('.soundcloud');
-    var $wrapper = $('<div class="title_wrapper">');
-    var $div = $('<div class="song_title">');
-    var $link = $(`<a target="_blank" alt="${data.song_title}" href="${data.uri}">${data.song_title}</a>`)
-    $link.appendTo($div);
-    $div.appendTo($wrapper);
-    $sc.html(data.scembed)
-      .append($wrapper);
+    if (data && data.uri && data.song_title && data.scembed) {
+      var $sc = $('.soundcloud');
+      var $wrapper = $('<div class="title_wrapper">');
+      var $div = $('<div class="song_title">');
+      var $link = $(`<a target="_blank" alt="${data.song_title}" href="${data.uri}">${data.song_title}</a>`)
+      $link.appendTo($div);
+      $div.appendTo($wrapper);
+      $sc.html(data.scembed)
+        .append($wrapper);
+    }
   }// end of appendSound function
 
   function appendArticles(data) {
-    data.forEach(function(el) {
-      build('p', el.webUrl, el.webTitle, 'headline', '.headlines');
-    })
+    if (data) {
+      data.forEach(function(el) {
+        build('p', el.webUrl, el.webTitle, 'headline', '.headlines');
+      });
+    }
   };// end of appendArticles function
 
     // build new li with TODO information
@@ -73,20 +81,27 @@ $(document).ready(function() {
   };//end of appendItem function
 
   function appendTodos(data) {
-    data.forEach(appendItem);
+    if (data) {
+      data.forEach(appendItem);
+    }
   };// end of appendTodos function
 
   function appendForm(id) {
-    $('.edit_user').attr({
-      id: 'edit_user_' + id,
-      action: '/users/' + id
-    });
-    $('#todo_user_id').val(id);
+    if (id) {
+      $('.edit_user').attr({
+        id: 'edit_user_' + id,
+        action: '/users/' + id
+      });
+      $('#todo_user_id').val(id);
+    }
+
   };// end of appendForm function
 
   function appendName(name) {
-    $('.welcome div').text("Welcome, ")
-    updateInput(name);
+    if (name) {
+      $('.welcome div').text("Welcome, ")
+      updateInput(name);
+    }
   };// end of appendName function
 
   function base64ifyPic(url, append) {
@@ -129,10 +144,12 @@ $(document).ready(function() {
   }
 
   function appendPics (pics){
-    $('body').css('background-image', 'url('+ pics.urls.raw + ')');
-    $('.unsplash').attr({
-      href: pics.links.html
-    });
+    if (pics.urls && pics.links) {
+      $('body').css('background-image', 'url('+ pics.urls.raw + ')');
+      $('.unsplash').attr({
+        href: pics.links.html
+      });
+    }
   };
 
   function appendData(data,refresh) {
