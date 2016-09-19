@@ -35,8 +35,9 @@ $(document).ready(function() {
     var $sc = $('.soundcloud');
     var $wrapper = $('<div class="title_wrapper">');
     var $div = $('<div class="song_title">');
+    var $link = $(`<a target="_blank" alt="${data.song_title}" href="${data.uri}">${data.song_title}</a>`)
+    $link.appendTo($div);
     $div.appendTo($wrapper);
-    $div.text(data.song_title);
     $sc.html(data.scembed)
       .append($wrapper);
   }// end of appendSound function
@@ -119,15 +120,19 @@ $(document).ready(function() {
       var dataUrl = canvas.toDataURL('image/jpeg', 0.6);
       if (append) {
         $('body').css('background-image', 'url('+ dataUrl + ')');
+        $('.unsplash').attr('href', data.pics.links.html);
       }
       chrome.storage.local.set({image: dataUrl});
       canvas = null;
     }
-    img.src = url;
+    img.src = url.urls.raw;
   }
 
   function appendPics (pics){
-    $('body').css('background-image', 'url('+ pics + ')');
+    $('body').css('background-image', 'url('+ pics.urls.raw + ')');
+    $('.unsplash').attr({
+      href: pics.links.html
+    });
   };
 
   function appendData(data,refresh) {
@@ -211,8 +216,8 @@ $(document).ready(function() {
     $span.text(name).appendTo('body');
     var w = document.querySelector('.temp').getBoundingClientRect().width;
     $span.remove();
-    $input[0].style.maxWidth = String(w * 1.2) + 'px';
-    $input[0].width = String(w * 1.2) + 'px';
+    $input[0].style.maxWidth = String(w * 1.3) + 'px';
+    $input[0].width = String(w * 1.3) + 'px';
   };
 
   // add all the event listeners!
@@ -257,10 +262,6 @@ $(document).ready(function() {
       e.stopPropagation();
     });
 
-    $('.settings_button').click(function() {
-      $('.settings').toggleClass('flipup');
-    });
-
     $('#edit_name').keyup(function(e) {
        var name = $(this).val();
        var user_id = $('#todo_user_id').val();
@@ -278,7 +279,7 @@ $(document).ready(function() {
        }
      });
 
-    $('.footer img:first-child').click(function(event) {
+    $('.footer .logo').click(function(event) {
         $('.soc').toggleClass('showSoc');
     });
   }
@@ -325,8 +326,9 @@ $(document).ready(function() {
       getAllUserData({pic: true, append:true});
     } else {
       chrome.alarms.get('refresh_data', alarm => {
+        $('body').css('background-image', 'url('+ data.image + ')');
+        $('.unsplash').attr('href', data.pics.links.html);
         if (!alarm) {
-          $('body').css('background-image', 'url('+ data.image + ')');
           console.log('Getting updated data');
           getAllUserData({pic: true, append: false});
           chrome.alarms.create('refresh_data',{delayInMinutes: 10});
@@ -336,6 +338,7 @@ $(document).ready(function() {
           appendData(data, {pic: false, append: false});
           listenToMe();
         }
+
       })
     }
   });// end of getting user data
